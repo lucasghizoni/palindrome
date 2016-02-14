@@ -1,10 +1,10 @@
 var resolvePalindrome = function(word){
 
-    var originalWord = word,
-        reversedWord = word.split("").reverse().join("");
+    var originalWord = word.toUpperCase().replace(/\W/g, ''),
+        reversedWord = word.split("").reverse().join("").toUpperCase().replace(/\W/g, '');
 
     if(originalWord === reversedWord){
-        console.log("This is palindrome!")
+        console.log("This is palindrome! :)")
         return true;
     }else{
         console.log("This is not palindrome! :(")
